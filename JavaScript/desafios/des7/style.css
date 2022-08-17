@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+h1 , h2 , h3 {
+    font-family: 'pacifico',cursive;
+    font-weight: normal;
+}
+body{
+    font-size: 12pt Arial;
+}

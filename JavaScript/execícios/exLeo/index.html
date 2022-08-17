@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="governo.icon.ico" type="image/x-icon">
+    <title>Cadastro</title>
+    <style>
+         body{
+            background-color: antiquewhite;
+            font-size: 12px Arial;
+        }
+        table, th{
+            text-align: center;
+            font-size: 12pt Arial;
+            border:1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 20px;
+        }
+        td{
+            border:1px solid;
+            text-align: left;
+        }
+        table{
+            border-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de cadrastro</h1>
+        <p>Digite seu Nome:<input type="text" name="nome" id="nome">  </p>
+        <p>Digite seu Usuario:<input type="text" name="usuario" id="usuario">   </p>
+        <p>Digite sua Senha : <input type="password" name="senha" id="senha"> </p>
+        <input type="button"  value="Cadastrar" onclick="cadastra()"></input>
+    <p><div id="res">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Usuario</th>
+                    <th>Senha</th>
+                 </tr>
+            </thead>
+        </table>
+    </div>
+    </p>
+    <script>
+        var usuario =[{
+            nome: "Jean",
+            usuario: "magical",
+            senha: 1232
+        }];
+        function cadastra(){
+
+            var res = document.getElementById("res");
+            res.innerHTML = `
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Usuario</th>
+                        <th>Senha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>${usuario[0]}</td>
+                    <td>${usuario[1]}</td>
+                    <td>${usuario[2]}</td>
+            </table>`
+        }
+    </script>
+</body>
+</html>

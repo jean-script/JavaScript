@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando troco</title>
+</head>
+<body>
+    <h1>Calculando troco</h1>
+    <button onclick="compra()">Comprar produto</button>
+    <script>
+        function compra(){
+            var compra = prompt("Digite o produto:");
+            var valor = prompt("Digite o valor do produto:");
+            var dado = prompt("digite o valor que ira dar:");
+            var total = alert(`você comprou o produto ${compra} com o valor ${valor} pagou com ${dado} seu troco é ${valor - dado}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas ações</title>
+</head>
+
+<body>
+    <h1>Múltiplas ações</h1>
+    <button onclick="ação()" id="botão">Clique para iniciar</button>
+    <section id="saida">
+        <p>Aqui vai aparecer o resultado</p>
+    </section>
+    <script>
+
+        function ação() {
+            let n1 = Number(prompt("Primeiro número:"))
+            let n2 = Number(prompt("Segundo número:"))
+            let tot = Number(prompt(`Valores informados: ${n1} e ${n2}. 
+            O que vamos fazer?
+            [1]somar [2]subtrair [3] múltiplicar [4] Dividir.`))
+
+            let saida = document.querySelector("#saida");
+            saida.innerHTML += `<h2>Calculando...</h2>`
+            switch (tot) {
+                case 1:
+                    saida.innerHTML += `<p>${n1}+${n2} = <strong>${n1 + n2}</strong></p>`
+                    break
+                case 2:
+                    saida.innerHTML +=`<p>${n1}-${n2} = <strong>${n1-n2}</strong></p>`
+                    break
+                case 3:
+                    saida.innerHTML +=`<p>${n1}x${n2} = <strong>${n1*n2}</strong></p>`
+                    break
+                case 4: 
+                    saida.innerHTML +=`<p>${n1}/${n2} = <strong>${n1/n2}</strong></p>`
+                    break    
+                default:
+                    saida.innerHTML += `<p>[ERRO]!`
+                    break
+            }
+        }
+       
+    </script>
+</body>
+
+</html>

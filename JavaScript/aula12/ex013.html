@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de dia</title>
+    <style>
+       body{
+           background-color:rgba(218, 216, 216, 0.475);
+           font-size: 12px Arial;
+       }
+    </style>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+   <p>
+       <ul type="square">
+           <li>Domingo</li>
+           <li>Segunda</li>
+           <li>Terça</li>
+           <li>Quarta</li>
+           <li>Quinta</li>
+           <li>Sexta</li>
+           <li>Sábado</li>
+       </ul>
+   </p>
+   Hoje é para você qual dia 
+   <input type="button" value="Ver" onclick="clicar()">
+<div id="dia">
+    <p>
+        Veja aqui o resultado
+    </p>
+</div>
+<script>
+    function clicar(){
+        var agora = new Date()
+        var dia = agora.getDay()
+        var res = window.document.querySelector("div#dia")
+        res.innerHTML =`Hoje é ${dia}`
+        switch(dia){
+            case 0 : 
+                 res.innerHTML += ` Domingo`
+                 break
+            case 1 : 
+                res.innerHTML += ` Segunda`
+                break
+            case 2 : 
+                    res.innerHTML+= ` Terça`
+                    break
+            case 3 : 
+                res.innerHTML+= ` Quarta`
+                break
+           case 4 : 
+                res.innerHTML+= ` Quinta`
+                break
+           case 5 : 
+                res.innerHTML+= ` Sexta`
+                break
+           case 6 :
+               res.innerHTML+= ` sábado`
+               break
+
+               default : 
+               res.innerHTML+=` Dia invalido`
+               break 
+        }
+    }
+</script>
+</body>
+</html>

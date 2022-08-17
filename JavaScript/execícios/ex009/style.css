@@ -1,0 +1,12 @@
+@charset "UTF-8";
+ 
+body{
+    background-color:rgb(0, 218, 247);
+    font:12pt Arial;
+}
+h1, h2, h3{
+    font-family: 'Pacifico', cursive; font-weight: normal;
+}
+button{
+    font-size: 12pt; padding: 20px;
+}

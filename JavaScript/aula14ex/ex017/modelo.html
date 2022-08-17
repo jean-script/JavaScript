@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contagem</h1>
+    </header>
+    <section>
+        <div>
+            <p>Inicio: <input type="number"  id="inicio" name="inicio"></p>
+            <p> Fim:   <input type="number"  id="fim" name="fim"></p>
+            <p>passo:  <input type="number"   id="passo" name="passo" ></p>
+            <p> <input type="button"  value="contar" onclick="contar()"></p>
+        </div>
+        <div id="resultado">
+            Aqui vai aparecer o resultado 
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Curso em video</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

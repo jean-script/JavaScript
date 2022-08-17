@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Mugiwara.png" type="image/x-icon">
+    <title>Jogos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        h1{            
+            background-image: linear-gradient(to right,blue,red,green);
+            text-align: center;
+            font-family: 'pacifico',cursive; font-weight: normal;
+            border-radius: 10px;
+            margin: auto;
+            padding: 30px;
+            text-shadow: 1px 2px 1px yellow;
+        }
+        ul{
+            list-style-image: url("Mugiwara.png");
+        }
+        #add{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h1>Jogos Favoritos</h1>
+    <div id="saida">
+
+    </div>
+   Digite um novo anime: <input type="text" id="add" name="add">
+   <input type="button" value="adicionar" onclick="add()">
+    <script src="ambiente.js"></script>
+</body>
+</html>

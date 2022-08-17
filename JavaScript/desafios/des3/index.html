@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+    <style>
+        button{
+            width:200px;
+            height:70px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <button onclick="mostrar()">Antecessor e Sucessor</button>
+    <script>
+        function mostrar(){
+            var num = window.prompt("Digite um numero:");
+            var final = alert(`este é o antecessor ${num-1} e aqui o sucessor ${num+++1}`);
+        }
+    </script>
+</body>
+</html>

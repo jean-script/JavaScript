@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Sálarial</title>
+</head>
+
+<body>
+    <h1>Reajuste sálarial</h1>
+    <button onclick="clicar()">Reajustar</button>
+    <div id="saida">
+        <p>
+            Vejamos o Reajuste
+        </p>
+    </div>
+    <script>
+        function clicar() {
+            let nome = prompt("Digite Seu nome:");
+            let salario = prompt(`Qual o salario ${nome}`);
+            let Reajuste = prompt(`O sálario de ${nome} vai ser reajustado em qual porcentagem:`);
+            let soma = salario * Reajuste/100;
+            salario.to
+            let res = document.querySelector("#saida");
+            
+            res.innerHTML = `<h2>O ${nome} recebeu um aumento sálarial</h2>`
+            res.innerHTML +=`<p>Com um aumento de ${Reajuste} o sálario vai aumentar${soma} no mês</p>`
+            res.innerHTML +=`<p>E a partir daí, ${nome} ira receber ${salario}`
+        }
+    </script>
+</body>
+
+</html>

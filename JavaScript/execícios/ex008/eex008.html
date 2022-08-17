@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados em JS</title>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="result">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+   <script>
+       function calcular(){
+           let a = Number(window.prompt('Digite um número: '));
+
+           let res = document.querySelector('section#result');
+           res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${a}</strong></p><hr>.`
+           res.innerHTML += `<p> O seu valor absoluto é ${Math.abs(a)}</p>`
+           res.innerHTML +=`<p>A sua parte inteira é ${Math.trunc(a)}</p>`
+           res.innerHTML +=`<p> O valor inteiro mais próximo é ${Math.round(a)}</p>`
+           res.innerHTML += `<p> A sua raiz cúbica é ${Math.cbrt(a)}</p>`
+           res.innerHTML +=`<p> A sua raiz quadrada é ${Math.sqrt(a)}</p>`
+           res.innerHTML +=`<p> O valor de ${a}<sup>2</sup> è ${Math.pow(a, 2)}</p>`
+           res.innerHTML +=`<p> O valor de ${a}<sup>3</sup> é ${Math.pow(a, 3)}</p>`
+
+       }
+   </script>
+</body>
+</html>

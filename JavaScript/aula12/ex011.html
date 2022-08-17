@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="governo.icon.ico" type="image/x-icon">
+    <title>Sistema de votação</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-size: 12px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Votação por idade</h1>
+    <p>
+        Veja se você pode votar
+    </p>
+    <P>
+        Digite sua idade: <input type="text" name="voto" id="voto">
+        <input type="button" id="button" value="Descobrir" onclick="iniciar()">
+    </P>
+    <div id="res">
+        Veja aqui seu estado de voto
+    </div>
+    <script>
+        function iniciar(){
+            var idade = document.querySelector("#voto").value;
+            var res = document.querySelector("#res");
+            res.innerHTML = `<p>Sua idade atual <strong>${idade} anos</strong></p> `;
+            if( idade < 16){
+                res.innerHTML +=`Não tem idade suficíente para voto`;
+            }else if( idade < 18 || idade > 65 ){
+                    res.innerHTML +=`voto é opcional`;
+                }else{
+                    res.innerHTML += `Voto obrigatorio`;
+                }
+        }
+
+
+    </script>
+</body>
+</html>
